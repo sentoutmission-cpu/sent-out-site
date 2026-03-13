@@ -10,29 +10,37 @@
             color: #c9d1d9;
             font-family: sans-serif;
             text-align: center;
-            padding: 100px 20px;
+            padding: 60px 20px;
             margin: 0;
         }
         .container {
             border: 1px solid #30363d;
             background-color: #161b22;
             padding: 40px;
-            border-radius: 12px;
+            border-radius: 15px;
             display: inline-block;
             max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        h1 { color: #58a6ff; margin-top: 0; }
+        h1 { color: #58a6ff; margin-bottom: 10px; }
         .quote { font-style: italic; color: #8b949e; margin-bottom: 30px; }
+        
         .btn {
-            background-color: #238636;
-            color: white;
-            padding: 15px 30px;
+            display: block;
+            width: 80%;
+            margin: 15px auto;
+            padding: 15px;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             font-weight: bold;
-            display: inline-block;
+            transition: 0.3s;
         }
-        .status { margin-top: 40px; color: #484f58; font-size: 12px; }
+        .btn-discussion { background-color: #238636; color: white; }
+        .btn-telegram { background-color: #0088cc; color: white; }
+        .btn-x { background-color: #1DA1F2; color: white; }
+        
+        .btn:hover { opacity: 0.8; transform: scale(1.02); }
+        .status { margin-top: 40px; color: #484f58; font-size: 12px; letter-spacing: 1px; }
     </style>
 </head>
 <body>
@@ -41,11 +49,16 @@
         <h1>Sent Out Mission</h1>
         <p class="quote">"Integrity is the anchor. Truth is the wind."</p>
         
-        <p>Welcome to the Safe Harbor.</p>
-        <br>
-        
-        <a href="https://github.com/sentoutmission-cpu/sent-out-site/discussions" class="btn">
+        <a href="https://github.com/sentoutmission-cpu/sent-out-site/discussions" class="btn btn-discussion">
             Enter the Discussion Hub
+        </a>
+
+        <a href="https://t.t.me/SentoutMission" class="btn btn-telegram">
+            Join Telegram
+        </a>
+
+        <a href="https://x.com/SentOutMission" class="btn btn-x">
+            Follow on X
         </a>
 
         <div class="status">
