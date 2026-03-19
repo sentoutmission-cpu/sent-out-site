@@ -3,85 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENT OUT MISSION | 03.19.26</title>
+    <title>THE SENT OUT MISSION | PAIR</title>
     <style>
         body {
-            background-color: #000;
-            color: #d4af37; /* Metallic Gold */
-            font-family: 'Garamond', serif;
+            background-color: #000000;
+            color: #D4AF37; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
+            justify-content: center;
+            min-height: 100vh;
             margin: 0;
-            overflow: hidden;
+            padding: 40px 20px;
             text-align: center;
         }
-        .container {
-            position: relative;
-            width: 100%;
-            max-width: 900px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        img {
-            width: 100%;
+        .hero-img {
+            max-width: 100%;
             height: auto;
-            opacity: 0.5; /* Makes the swans look deep and mysterious */
-            display: block;
-        }
-        .floating-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            pointer-events: none;
+            margin-bottom: 30px;
+            border-radius: 4px;
         }
         h1 {
-            font-size: clamp(1.5rem, 5vw, 3rem);
-            letter-spacing: 15px;
-            margin: 0;
-            text-transform: uppercase;
+            letter-spacing: 5px;
             font-weight: 300;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            opacity: 0.8;
         }
-        p {
-            font-size: clamp(0.9rem, 3vw, 1.4rem);
-            letter-spacing: 6px;
-            margin-top: 20px;
-            font-style: italic;
-            color: #aaa;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-        }
-        .footer {
-            position: absolute;
-            bottom: 40px;
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
             width: 100%;
-            font-size: 0.8rem;
+            max-width: 320px;
+        }
+        .btn {
+            padding: 18px;
+            border: 1px solid #D4AF37;
+            background: rgba(212, 175, 55, 0.05);
+            color: #D4AF37;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 12px;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+        }
+        .btn:hover {
+            background-color: #D4AF37;
+            color: #000;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+            cursor: pointer;
+        }
+        .signature-img {
+            width: 140px;
+            margin-top: 50px;
+            opacity: 1;
+        }
+        .footer-text {
+            font-size: 9px;
+            color: #444;
+            margin-top: 30px;
             letter-spacing: 3px;
-            color: #666;
-            line-height: 1.8;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="sentinel.png" alt="The Sentinel">
-        
-        <div class="floating-text">
-            <h1>SENT OUT MISSION</h1>
-            <p>The Architect is at work.</p>
-        </div>
+    <img src="BlackSwanRectangle.png" alt="The Sent Out Mission" class="hero-img">
+
+    <h1>The PAIR Protocol</h1>
+
+    <div class="button-container">
+        <a href="README.md" class="btn">Read White Paper</a>
+        <a href="https://twitter.com/sentoutmission" class="btn">Mission Updates (X)</a>
+        <a href="mailto:contact@sentoutmission.com" class="btn">Strategic Inquiry</a>
     </div>
 
-    <div class="footer">
-        FULL REVEAL: 03.19.26 | 08:00 CST<br>
-        <strong>Measured by integrity. Built for longevity.</strong>
-    </div>
+    <img src="blackSwanSquare.png" alt="Architect Seal" class="signature-img">
+
+    <p class="footer-text">Built in 7 Days. Engineered for Eternity.</p>
 
 </body>
 </html>
