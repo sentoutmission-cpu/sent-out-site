@@ -12,59 +12,75 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             min-height: 100vh;
             margin: 0;
-            padding: 40px 20px;
+            padding: 0px 20px 40px;
             text-align: center;
         }
-        .hero-img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 30px;
-            border-radius: 4px;
+        
+        .hero-img-container {
+            width: 100%;
+            height: 220px; 
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
         }
+        
+        .hero-img {
+            min-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
         h1 {
             letter-spacing: 5px;
             font-weight: 300;
-            margin-bottom: 40px;
+            margin-top: 0;
+            margin-bottom: 30px;
             text-transform: uppercase;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             opacity: 0.8;
         }
+        
         .button-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
             width: 100%;
-            max-width: 320px;
+            max-width: 280px;
+            margin-bottom: 30px;
         }
+        
         .btn {
-            padding: 18px;
+            padding: 15px;
             border: 1px solid #D4AF37;
             background: rgba(212, 175, 55, 0.05);
             color: #D4AF37;
             text-decoration: none;
             letter-spacing: 2px;
-            font-size: 12px;
+            font-size: 11px;
             transition: all 0.4s ease;
             text-transform: uppercase;
         }
+        
         .btn:hover {
             background-color: #D4AF37;
             color: #000;
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
-            cursor: pointer;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
         }
+        
         .signature-img {
-            width: 140px;
-            margin-top: 50px;
+            width: 110px;
             opacity: 1;
         }
+        
         .footer-text {
-            font-size: 9px;
+            font-size: 8px;
             color: #444;
-            margin-top: 30px;
+            margin-top: 20px;
             letter-spacing: 3px;
             text-transform: uppercase;
         }
@@ -72,14 +88,16 @@
 </head>
 <body>
 
-    <img src="BlackSwanRectangle.png" alt="The Sent Out Mission" class="hero-img">
+    <div class="hero-img-container">
+        <img src="BlackSwanRectangle.png" alt="The Sent Out Mission" class="hero-img">
+    </div>
 
     <h1>The PAIR Protocol</h1>
 
     <div class="button-container">
         <a href="README.md" class="btn">Read White Paper</a>
         <a href="https://twitter.com/sentoutmission" class="btn">Mission Updates (X)</a>
-        <a href="mailto:contact@sentoutmission.com" class="btn">Strategic Inquiry</a>
+        <a href="mailto:Sentoutmission@gmail.com" class="btn">Strategic Inquiry</a>
     </div>
 
     <img src="blackSwanSquare.png" alt="Architect Seal" class="signature-img">
