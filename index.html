@@ -6,7 +6,6 @@
     
     <title>THE PAIR PROTOCOL | THE SENT OUT MISSION</title>
     <meta name="description" content="PAIR Protocol: Decentralized software utility for the Sent Out Mission. Integrated for Android Auto, Smartwatch, and Mobile Web3. Providing food security and local resource distribution.">
-    <meta name="keywords" content="PAIR Protocol, Sent Out Mission, PAIR Token, food near me, local hunger relief, Android Auto Crypto, Smartwatch Utility, Mark 6 Mission, Bridgeport IL, Black Swan Utility, Resource Bridge">
     <meta name="author" content="Jonathan -Dev-">
 
     <script type="application/ld+json">
@@ -18,111 +17,26 @@
         "@type": "Person",
         "name": "Jonathan -Dev-"
       },
-      "description": "Proprietary autonomous humanitarian dispatch and acoustic triage architecture. The PAIR token is the driving mechanism for global safety.",
+      "description": "Proprietary autonomous humanitarian dispatch and acoustic triage architecture.",
       "applicationCategory": "PublicSafetySoftware, FinancialService",
-      "operatingSystem": "Universal/Cloud-Based",
-      "featureList": "Acoustic Triage, Autonomous Resource Deployment, Strategic Financial Governance, Global Satellite Connectivity"
+      "operatingSystem": "Universal/Cloud-Based"
     }
     </script>
 
     <style>
-        body {
-            background-color: #000000;
-            color: #D4AF37; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
+        body { background-color: #000000; color: #D4AF37; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; text-align: center; }
+        h1 { letter-spacing: 8px; font-weight: 300; margin-bottom: 40px; text-transform: uppercase; font-size: 1.2rem; color: #D4AF37; }
+        .button-container { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 300px; margin-bottom: 40px; }
+        .btn { padding: 18px; border: 1px solid #D4AF37; background: rgba(212, 175, 55, 0.05); color: #D4AF37; text-decoration: none; letter-spacing: 2px; font-size: 12px; transition: all 0.4s ease; text-transform: uppercase; cursor: pointer; }
+        .btn:hover { background-color: #D4AF37; color: #000; box-shadow: 0 0 25px rgba(212, 175, 55, 0.4); }
         
-        h1 {
-            letter-spacing: 8px;
-            font-weight: 300;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-            color: #D4AF37;
-        }
-        
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            width: 100%;
-            max-width: 300px;
-            margin-bottom: 40px;
-        }
-        
-        .btn {
-            padding: 18px;
-            border: 1px solid #D4AF37;
-            background: rgba(212, 175, 55, 0.05);
-            color: #D4AF37;
-            text-decoration: none;
-            letter-spacing: 2px;
-            font-size: 12px;
-            transition: all 0.4s ease;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: #D4AF37;
-            color: #000;
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
-        }
-        
-        /* Modal Style for Roadmap */
-        #roadmapModal {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: #000;
-            z-index: 1000;
-            overflow-y: auto;
-            padding: 40px 20px;
-            text-align: left;
-        }
-
-        .modal-content {
-            max-width: 800px;
-            margin: auto;
-            border: 1px solid #D4AF37;
-            padding: 30px;
-        }
-
-        .close-btn {
-            color: #D4AF37;
-            float: right;
-            font-size: 28px;
-            cursor: pointer;
-            border: 1px solid #D4AF37;
-            padding: 5px 15px;
-            margin-bottom: 20px;
-        }
-
-        .roadmap-h { color: #D4AF37; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 30px; font-size: 1.1rem; }
-        .foundation { background: rgba(212, 175, 55, 0.05); padding: 20px; border-left: 2px solid #D4AF37; margin-top: 40px; }
-
-        .signature-img {
-            width: 160px;
-            height: auto;
-            border: 1px solid rgba(212, 175, 55, 0.2); 
-            margin-bottom: 20px;
-        }
-        
-        .footer-text {
-            font-size: 9px;
-            color: #555;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-top: 10px;
-        }
+        #roadmapModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 1000; overflow-y: auto; padding: 40px 20px; text-align: left; }
+        .modal-content { max-width: 800px; margin: auto; border: 1px solid #D4AF37; padding: 30px; line-height: 1.6; }
+        .close-btn { color: #D4AF37; float: right; font-size: 28px; cursor: pointer; border: 1px solid #D4AF37; padding: 5px 15px; margin-bottom: 20px; }
+        .roadmap-h { color: #D4AF37; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 30px; font-size: 1.1rem; letter-spacing: 2px; }
+        .foundation { background: rgba(212, 175, 55, 0.08); padding: 25px; border-left: 3px solid #D4AF37; margin-top: 40px; color: #fff; }
+        .signature-img { width: 160px; height: auto; border: 1px solid rgba(212, 175, 55, 0.2); margin-bottom: 20px; }
+        .footer-text { font-size: 9px; color: #555; letter-spacing: 4px; text-transform: uppercase; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -139,28 +53,27 @@
         <div class="modal-content">
             <span class="close-btn" onclick="document.getElementById('roadmapModal').style.display='none'">CLOSE</span>
             <h2 style="color: #D4AF37; letter-spacing: 4px;">MASTER SPECIFICATION</h2>
-            <p style="font-style: italic;">Lead Architect: Jonathan -Dev-</p>
+            <p style="font-style: italic; color: #888;">Lead Architect: Jonathan -Dev-</p>
 
-            <h3 class="roadmap-h">I. Deployment Matrix</h3>
-            <p>Architected for integration across Automobiles, Marine Vessels, Home Automation, and Public Infrastructure. Features autonomous acoustic triage and high-risk zone standalone operation.</p>
+            <h3 class="roadmap-h">I. Deployment Matrix & Acoustic Triage</h3>
+            <p>The PAIR Protocol is architected for native, deep-system integration across <b>Automobiles, Marine Vessels, Home Automation, and Wearable Electronics.</b> Our core engine utilizes proprietary <b>Acoustic Triage</b> logic to identify distress patterns in real-time. This isn't just a button; it’s a living network designed for standalone operation in high-risk zones, providing a 24/7 safety layer that functions when traditional infrastructure collapses.</p>
 
-            <h3 class="roadmap-h">II. Resource Deployment</h3>
-            <p>The PAIR token serves as the driving mechanism for independent facilitation of food, clothing, and digital funds based on real-time situational assessment.</p>
+            <h3 class="roadmap-h">II. The Driving Mechanism (Resource Deployment)</h3>
+            <p>The PAIR token serves as the functional conduit for decentralized humanitarian assistance. The protocol independently facilitates the logistical deployment of <b>food security, clothing, and digital funds</b> based on environmental assessment. By bridging the gap between the Solana blockchain and physical human needs, we ensure that resources are delivered directly to the point of crisis without institutional friction.</p>
 
-            <h3 class="roadmap-h">III. Strategic Governance</h3>
-            <p>Proprietary architecture open for strategic negotiation. The Protocol manages operational autonomy with the ability to onboard global financial and legal agencies.</p>
+            <h3 class="roadmap-h">III. Strategic Governance & Financial Autonomy</h3>
+            <p>This architecture is proprietary and engineered for global scalability. The Lead Architect maintains absolute operational autonomy, with a framework built to onboard specialized financial agencies and legal counsel at will. We remain open to high-level strategic negotiations that align with the mission of providing a universal "safety handshake" for the invisible and the stranded.</p>
 
             <div class="foundation">
-                <h3 style="margin-top:0;">THE FOUNDATION</h3>
-                <p>"To my mom and dad... your baby boy did it."</p>
-                <p>To my wife: Thank you for the sacrifice of these 10 days. You are my best friend. To my kids: This is your legacy. No one should ever have to press a button and find nobody on the other side. You are never alone. You are Paired.</p>
-                <p style="text-align:right;">— Jonathan -Dev-</p>
+                <h3 style="margin-top:0; color: #D4AF37;">THE FOUNDATION</h3>
+                <p><i>"To my mom and dad... your baby boy did it."</i></p>
+                <p>To my wife: Thank you for your unwavering support and for the sacrifice of these 10 days. You are my best friend and my greatest partner. To my kids: This is your legacy. I worked 49 years to get to this kitchen table, and I give this to you so you never have to feel stranded. No one should ever have to press a button and find nobody on the other side. You are never alone. You are <b>Paired</b>.</p>
+                <p style="text-align:right; font-weight: bold;">— Jonathan -Dev-</p>
             </div>
         </div>
     </div>
 
     <img src="blackSwanSquare.png" alt="ARCHITECT SEAL" class="signature-img">
-
     <p class="footer-text">Built in 7 Days. Engineered for Eternity.</p>
 
 </body>
