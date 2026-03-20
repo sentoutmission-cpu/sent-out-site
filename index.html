@@ -11,7 +11,7 @@
     <style>
         body { background-color: #000000; color: #D4AF37; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; text-align: center; }
         h1 { letter-spacing: 8px; font-weight: 300; margin-bottom: 40px; text-transform: uppercase; font-size: 1.2rem; color: #D4AF37; }
-        .button-container { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 300px; margin-bottom: 40px; }
+        .button-container { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 300px; margin-bottom: 30px; }
         .btn { padding: 18px; border: 1px solid #D4AF37; background: rgba(212, 175, 55, 0.05); color: #D4AF37; text-decoration: none; letter-spacing: 2px; font-size: 12px; transition: all 0.4s ease; text-transform: uppercase; cursor: pointer; }
         .btn:hover { background-color: #D4AF37; color: #000; box-shadow: 0 0 25px rgba(212, 175, 55, 0.4); }
         
@@ -21,6 +21,9 @@
         .roadmap-h { color: #D4AF37; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 30px; font-size: 1.1rem; letter-spacing: 2px; }
         .signature-img { width: 160px; height: auto; border: 1px solid rgba(212, 175, 55, 0.2); margin-top: 40px; }
         .footer-text { font-size: 9px; color: #555; letter-spacing: 4px; text-transform: uppercase; margin-top: 10px; }
+        
+        .disclosure-box { margin: 20px auto; padding: 20px; border: 1px dashed rgba(212, 175, 55, 0.3); max-width: 400px; font-size: 11px; color: #888; text-align: left; line-height: 1.6; }
+        .ca-display { color: #D4AF37; font-family: monospace; font-size: 10px; display: block; word-break: break-all; margin-top: 10px; border-top: 1px solid #333; padding-top: 10px; text-align: center; }
     </style>
 </head>
 <body>
@@ -28,9 +31,25 @@
     <h1>The PAIR Protocol</h1>
 
     <div class="button-container">
+        <a href="https://pump.fun/coin/6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump" target="_blank" class="btn" style="border: 2px solid #D4AF37; font-weight: bold; background: rgba(212, 175, 55, 0.1);">Fuel the Mission ($PAIR)</a>
+        
         <a href="#" class="btn" onclick="document.getElementById('roadmapModal').style.display='block'">View Protocol Roadmap</a>
         <a href="https://twitter.com/sentoutmission" target="_blank" class="btn">Mission Updates (X)</a>
         <a href="mailto:Sentoutmission@gmail.com" class="btn">Strategic Inquiry</a>
+    </div>
+
+    <div class="disclosure-box">
+        <span style="letter-spacing: 2px; text-transform: uppercase; color: #D4AF37; font-weight: bold; display: block; margin-bottom: 10px; text-align: center;">Foundation & Integrity</span>
+        
+        • <b>Organic Growth:</b> Launched with a $12 kitchen-table POC. We bypass predatory marketing to focus 100% on the build. <br><br>
+        • <b>Liquidity Warning:</b> Initial low liquidity is expected during our bootstrap phase. We recommend smaller support increments as we scale. <br><br>
+        • <b>Bonding Curve Security:</b> Managed by Pump.fun mathematical curves to ensure a fair market and prevent developer rugs. <br><br>
+        • <b>Ethical Guardrails:</b> Zero-tolerance for predatory or sexually explicit misuse. PAIR is for Mercy and Life-Safety only.
+        
+        <div class="ca-display">
+            OFFICIAL CA: 6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump<br>
+            DIRECT SUPPORT: FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXxb
+        </div>
     </div>
 
     <div id="roadmapModal">
