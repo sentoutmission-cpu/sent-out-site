@@ -6,126 +6,128 @@
     <title>THE PAIR PROTOCOL | DEPIN SAFETY INFRASTRUCTURE</title>
     <style>
         :root {
-            --charcoal: #0f0f0f;
-            --nickel: #d1d1d1;
+            --charcoal: #050505;
+            --nickel: #e0e0e0;
             --pure-white: #ffffff;
-            --safety-red: #ff3b3b;
+            --safety-red: #ff0000;
         }
+
+        html { scroll-behavior: smooth; }
 
         body {
             margin: 0;
             padding: 0;
             background-color: var(--charcoal);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
             color: var(--pure-white);
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
         }
 
-        header {
-            margin-top: 50px;
-            text-align: center;
-        }
+        header { margin-top: 80px; text-align: center; }
 
         .main-title {
-            font-size: 2.2rem;
-            letter-spacing: 10px;
-            color: var(--nickel);
-            font-weight: 200;
+            font-size: 2.5rem;
+            letter-spacing: 15px;
+            color: var(--pure-white);
+            font-weight: 700;
             text-transform: uppercase;
         }
 
-        .seal-container {
-            margin: 30px auto;
-            max-width: 550px;
-            width: 85%;
+        /* DIGITAL HEARTBEAT - No Image Needed */
+        .pulse-box {
+            margin: 60px auto;
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--nickel);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
 
-        .mercy-seal {
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 0 15px rgba(255,255,255,0.1));
-            animation: heart-throttle 5s infinite ease-in-out;
+        .pulse-inner {
+            width: 20px;
+            height: 20px;
+            background-color: var(--safety-red);
+            border-radius: 50%;
+            animation: heart-beat 1.5s infinite ease-in-out;
         }
 
-        @keyframes heart-throttle {
-            0%, 100% { transform: scale(1); opacity: 0.9; }
-            50% { transform: scale(1.01); opacity: 1; }
+        @keyframes heart-beat {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(2.5); opacity: 0.2; }
+            100% { transform: scale(1); opacity: 0.8; }
         }
 
         .nav-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
             width: 90%;
-            max-width: 400px;
-            margin-top: 10px;
+            max-width: 500px;
+            margin-bottom: 120px;
         }
 
         .btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(209, 209, 209, 0.3);
+            background: #111;
+            border: 1px solid #333;
             color: var(--nickel);
-            padding: 20px;
+            padding: 25px;
             text-align: center;
             text-decoration: none;
             font-size: 1rem;
-            letter-spacing: 3px;
+            letter-spacing: 5px;
             text-transform: uppercase;
-            transition: 0.3s;
-            backdrop-filter: blur(10px);
+            transition: 0.2s;
         }
 
         .btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--pure-white);
-            color: var(--pure-white);
+            background: var(--pure-white);
+            color: #000;
+            font-weight: bold;
         }
 
-        .footer-section {
-            margin: 60px 20px;
-            max-width: 800px;
+        .content-section {
+            width: 90%;
+            max-width: 900px;
+            padding: 100px 0;
+            border-top: 1px solid #222;
+        }
+
+        .section-header {
+            font-size: 1.8rem;
+            letter-spacing: 8px;
+            margin-bottom: 50px;
             text-align: center;
-            border-top: 1px solid #333;
-            padding-top: 40px;
+            text-transform: uppercase;
         }
 
-        .mission-statement {
-            font-size: 1.1rem;
-            color: var(--nickel);
-            margin-bottom: 40px;
-            line-height: 1.7;
-            font-weight: 300;
-        }
-
-        .bold-white { color: var(--pure-white); font-weight: 600; }
+        .item { margin-bottom: 40px; border-left: 4px solid var(--safety-red); padding-left: 25px; }
+        .item h3 { font-size: 1.1rem; letter-spacing: 3px; color: var(--pure-white); margin: 0 0 10px 0; }
+        .item p { font-size: 1rem; color: #777; line-height: 1.5; margin: 0; }
 
         .data-box {
             background: #000;
-            padding: 30px;
-            border: 1px solid #222;
+            padding: 50px 20px;
             width: 100%;
+            border-top: 2px solid #222;
+            text-align: center;
         }
 
-        .label {
-            font-size: 0.7rem;
-            letter-spacing: 4px;
-            color: #555;
-            margin-bottom: 10px;
-            display: block;
-        }
-
+        .label { font-size: 0.8rem; letter-spacing: 5px; color: #444; margin-bottom: 15px; display: block; }
         .value {
-            font-family: 'Monaco', 'Consolas', monospace;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: var(--pure-white);
             word-break: break-all;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
             display: block;
         }
+
+        @media (max-width: 600px) { .value { font-size: 1.1rem; } .main-title { font-size: 1.5rem; } }
     </style>
 </head>
 <body>
@@ -134,32 +136,56 @@
         <div class="main-title">THE PAIR PROTOCOL</div>
     </header>
 
-    <div class="seal-container">
-        <img src="MERCY_SIG_SEAL_V1_MARCH2026.png" alt="MERCY SEAL" class="mercy-seal">
+    <div class="pulse-box">
+        <div class="pulse-inner"></div>
     </div>
 
     <nav class="nav-container">
         <a href="https://join.pump.fun/HSag/8omkz7ui" class="btn">FUEL THE MISSION (PAIR)</a>
-        <a href="#" class="btn">THE MERCY BLUEPRINT</a>
-        <a href="#" class="btn">VULNERABILITY SHIELD</a>
+        <a href="#blueprint" class="btn">THE MERCY BLUEPRINT</a>
+        <a href="#shield" class="btn">VULNERABILITY SHIELD</a>
         <a href="mailto:sentoutmission@gmail.com" class="btn">STRATEGIC INQUIRY</a>
     </nav>
 
-    <section class="footer-section">
-        <p class="mission-statement">
-            <span class="bold-white">STRATEGIC ORIGIN:</span> Built on a foundational vow to the vulnerable. The PAIR Protocol is the world’s first autonomous DePIN infrastructure for life preservation.
-            <br><br>
-            <span class="bold-white">GROUNDBREAKING:</span> First-to-Market Verbal Biometric Authorization and Response Logic.
-        </p>
-
-        <div class="data-box">
-            <span class="label">OFFICIAL CONTRACT ADDRESS</span>
-            <span class="value">6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump</span>
-            
-            <span class="label">DIRECT SUPPORT</span>
-            <span class="value">FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXXb</span>
+    <section id="blueprint" class="content-section">
+        <div class="section-header">THE MERCY BLUEPRINT</div>
+        <div class="item">
+            <h3>VERBAL AUTHORIZATION PROTOCOL</h3>
+            <p>Proprietary Biometric Handshake allowing autonomous hardware access during life-critical events without manual UI friction.</p>
+        </div>
+        <div class="item">
+            <h3>TRIAGE RESPONSE INTELLIGENCE</h3>
+            <p>Mathematical prioritization of Life over Property. Real-time environmental scanning and high-speed de-escalation logic.</p>
+        </div>
+        <div class="item">
+            <h3>DEPIN SAFETY INFRASTRUCTURE</h3>
+            <p>Decentralized Physical Infrastructure Network bridging mobile sensor arrays with standalone emergency nodes.</p>
         </div>
     </section>
+
+    <section id="shield" class="content-section">
+        <div class="section-header">VULNERABILITY SHIELD</div>
+        <div class="item">
+            <h3>AURAL SPATIAL NAVIGATION</h3>
+            <p>30-foot hazard detection and landmark-based auditory guidance for the visually impaired and panicked users.</p>
+        </div>
+        <div class="item">
+            <h3>ACOUSTIC CRISIS DETECTION</h3>
+            <p>High-fidelity gunshot and impact recognition with automated lockdown and emergency responder data streams.</p>
+        </div>
+        <div class="item">
+            <h3>ENCRYPTED EVIDENCE VAULT</h3>
+            <p>Dual-tier localized and node-based storage for critical crime-scene documentation and vocal consent prints.</p>
+        </div>
+    </section>
+
+    <div class="data-box">
+        <span class="label">OFFICIAL CONTRACT ADDRESS</span>
+        <span class="value">6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump</span>
+        
+        <span class="label">DIRECT SUPPORT</span>
+        <span class="value">FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXXb</span>
+    </div>
 
 </body>
 </html>
