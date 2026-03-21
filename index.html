@@ -3,25 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE PAIR PROTOCOL | MERCY GUARDIAN</title>
+    <title>MERCY GUARDIAN PROTOCOL</title>
     <style>
-        :root {
-            --gold: #D4AF37;
-            --black: #000000;
-        }
-
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            background-color: var(--black);
-            color: var(--gold);
+            background-color: #000;
+            color: #D4AF37;
             font-family: 'Courier New', Courier, monospace;
-            overflow-x: hidden;
         }
 
-        /* The Destination Backdrop */
-        .hero-bg {
+        /* FULL SCREEN BACKDROP */
+        .master-container {
             background-image: url('MERCY_SIG_SEAL_V1_MARCH2026.png');
             background-size: cover;
             background-position: center;
@@ -30,93 +24,92 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             padding: 20px;
             box-sizing: border-box;
         }
 
-        /* Overlay to keep text readable against the seal */
-        .overlay {
-            background: rgba(0, 0, 0, 0.7);
+        /* DARK SHIELD OVERLAY TO MAKE BUTTONS POP */
+        .content-shield {
+            background: rgba(0, 0, 0, 0.85);
+            border: 2px solid #D4AF37;
             padding: 30px;
-            border: 2px solid var(--gold);
-            width: 100%;
             max-width: 600px;
+            width: 100%;
             text-align: center;
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+            margin-top: 20px;
         }
 
-        .ca-box {
-            border: 1px solid var(--gold);
+        .top-seal {
+            width: 150px;
+            height: auto !important; /* NO SQUISHING */
+            margin-bottom: 20px;
+        }
+
+        .ca-text {
+            font-size: 0.75rem;
+            border: 1px dashed #D4AF37;
             padding: 10px;
-            font-size: 0.8rem;
-            margin-bottom: 25px;
-            background: rgba(212, 175, 55, 0.1);
+            margin-bottom: 20px;
+            word-break: break-all;
         }
 
-        .button-stack {
+        /* THE 4 MISSION BUTTONS */
+        .button-grid {
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin: 20px 0;
         }
 
-        .mercy-btn {
+        .btn {
             background: transparent;
-            border: 2px solid var(--gold);
-            color: var(--gold);
-            padding: 15px;
-            text-transform: uppercase;
+            border: 2px solid #D4AF37;
+            color: #D4AF37;
+            padding: 18px;
+            text-decoration: none;
             font-weight: bold;
             letter-spacing: 2px;
-            cursor: pointer;
             transition: 0.3s;
-            text-decoration: none;
         }
 
-        .mercy-btn:hover {
-            background: var(--gold);
-            color: var(--black);
-            box-shadow: 0 0 20px var(--gold);
+        .btn:hover {
+            background: #D4AF37;
+            color: #000;
+            box-shadow: 0 0 20px #D4AF37;
         }
 
-        .integrity-section {
-            margin-top: 30px;
-            border-top: 1px solid var(--gold);
-            padding-top: 20px;
+        .mission-vow {
             font-size: 0.9rem;
-            line-height: 1.8;
-        }
-
-        .integrity-seal-small {
-            width: 80px;
-            height: auto !important;
-            margin-bottom: 15px;
+            margin-top: 25px;
+            border-top: 1px solid #D4AF37;
+            padding-top: 15px;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-<div class="hero-bg">
-    <div class="overlay">
-        <div class="ca-box">
-            CA: 6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump<br>
-            (OFFICIAL NODE)
+<div class="master-container">
+    
+    <div class="content-shield">
+        <img src="blackSwanSquare.png" alt="Integrity Seal" class="top-seal">
+
+        <div class="ca-text">
+            NODE CA: 6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump
         </div>
 
-        <img src="blackSwanSquare.png" alt="Integrity" class="integrity-seal-small">
-        
-        <div class="button-stack">
-            <a href="#" class="mercy-btn">FUEL THE MISSION (BUY PAIR)</a>
-            <a href="#" class="mercy-btn">STRATEGIC INQUIRY</a>
-            <a href="#" class="mercy-btn">MERCY GUARDIAN PORTAL</a>
-            <a href="#" class="mercy-btn">AURAL NODE PROTOCOL</a>
+        <div class="button-grid">
+            <a href="https://pump.fun/6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump" class="btn">FUEL THE MISSION (BUY PAIR)</a>
+            <a href="mailto:Sentoutmission@gmail.com" class="btn">STRATEGIC INQUIRY</a>
+            <a href="#" class="btn">MERCY GUARDIAN PORTAL</a>
+            <a href="#" class="btn">AURAL NODE PROTOCOL</a>
         </div>
 
-        <div class="integrity-section">
-            <strong>INTEGRITY:</strong> "Forged at a kitchen table with a $12 budget and a vow to serve the vulnerable. We don't build for hype; we build for the Heart. Every token fuels the Mercy architecture."
+        <div class="mission-vow">
+            "Forged at a kitchen table with a $12 budget and a vow to serve the vulnerable. We build for the Heart."
         </div>
     </div>
+
 </div>
 
 </body>
