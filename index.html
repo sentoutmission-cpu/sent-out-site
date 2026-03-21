@@ -3,42 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE PAIR PROTOCOL</title>
+    <title>MERCY GUARDIAN | PAIR PROTOCOL</title>
     <style>
-        body { background-color: #000; color: #D4AF37; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; text-align: center; }
-        .ca-box { border: 1px solid #D4AF37; padding: 15px; width: 100%; max-width: 400px; margin-bottom: 30px; font-family: monospace; cursor: pointer; border-radius: 8px; background: rgba(212,175,55,0.1); }
-        h1 { letter-spacing: 8px; text-transform: uppercase; margin: 20px 0; font-size: 1.4rem; }
-        .btn-link { display: block; width: 100%; max-width: 300px; padding: 18px; margin: 10px 0; border: 1px solid #D4AF37; color: #D4AF37; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 12px; }
-        .integrity-row { display: flex; align-items: center; gap: 15px; max-width: 500px; margin: 40px 0; text-align: left; border-top: 1px solid #222; padding-top: 20px; }
-        .swan-img { width: 70px; height: 70px; flex-shrink: 0; border: 1px solid #333; }
-        .integrity-text { font-size: 11px; color: #888; border-left: 2px solid #D4AF37; padding-left: 12px; line-height: 1.5; }
-        /* THE STABILITY FIX */
-        .mercy-main-img { width: 100%; max-width: 280px; height: auto !important; margin: 30px 0; display: block; }
-        .footer-ca { margin-top: 30px; font-family: monospace; font-size: 14px; opacity: 0.8; word-break: break-all; padding: 20px; border-top: 1px solid #222; width: 100%; max-width: 500px; }
+        :root {
+            --gold: #D4AF37;
+            --black: #000000;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--gold);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .terminal-container {
+            width: 100%;
+            max-width: 700px;
+            border: 2px solid var(--gold);
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Essential Fix: No Squishing */
+        .img-seal {
+            width: 100%;
+            max-width: 280px;
+            height: auto !important; 
+            margin: 10px auto;
+            display: block;
+            border: 1px solid var(--gold);
+        }
+
+        .header-title {
+            text-align: center;
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .data-grid {
+            margin-top: 25px;
+            font-size: 0.85rem;
+            border-top: 1px solid var(--gold);
+            padding-top: 15px;
+        }
+
+        .mission-statement {
+            font-style: italic;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px dashed var(--gold);
+        }
+
+        .label { color: #FFFFFF; font-weight: bold; }
+        .value { word-break: break-all; color: var(--gold); }
+
+        .roadmap-list {
+            list-style: none;
+            padding: 0;
+        }
+        .roadmap-list li { margin-bottom: 10px; }
     </style>
 </head>
 <body>
-    <div class="ca-box" onclick="navigator.clipboard.writeText('6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump'); alert('CA Copied!');">
-        CA: 6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump<br>(TAP TO COPY)
+
+<div class="terminal-container">
+    <h1 class="header-title">MERCY GUARDIAN</h1>
+    
+    <img src="blackSwanSquare.png" alt="The Foundation Seal" class="img-seal">
+
+    <div class="mission-statement">
+        "Forged at a kitchen table with a $12 budget and a vow to serve the vulnerable. We build for the Heart."
     </div>
 
-    <h1>The PAIR Protocol</h1>
-
-    <a href="https://pump.fun/coin/6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump" target="_blank" class="btn-link" style="background: rgba(212,175,55,0.2);">Fuel the Mission (BUY PAIR)</a>
-    <a href="mailto:Sentoutmission@gmail.com" class="btn-link">Strategic Inquiry</a>
-
-    <div class="integrity-row">
-        <img src="blackSwanSquare.png" alt="Seal" class="swan-img">
-        <div class="integrity-text">
-            <b>INTEGRITY:</b> Born at a kitchen table. We don't build for hype; we build for the vulnerable. Every token fuels the Mercy architecture.
-        </div>
+    <div class="data-grid">
+        <p><span class="label">CA:</span> <span class="value">6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump</span></p>
+        <p><span class="label">WALLET:</span> <span class="value">FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXxb</span></p>
+        <p><span class="label">STRATEGIC EMAIL:</span> <span class="value">Sentoutmission@gmail.com</span></p>
     </div>
 
-    <img src="MERCY_SIG_SEAL_V1_MARCH2026.png" alt="Mercy Guardian" class="mercy-main-img">
+    <h3>ROADMAP_V1.0</h3>
+    <ul class="roadmap-list">
+        <li>[I] DEPLOYMENT: Mobile / Auto / Satellite</li>
+        <li>[II] COMPASSIONATE HANDSHAKE: Mediation Layer</li>
+        <li>[III] ETHICAL CONSENT: Vocal Signature Protocol</li>
+    </ul>
 
-    <div class="footer-ca">
-        <span style="font-size: 10px; color: #555;">SUPPORT WALLET:</span><br>
-        FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXxb
-    </div>
+    <img src="MERCY_SIG_SEAL_V1_MARCH2026.png" alt="The Signature Shield" class="img-seal">
+</div>
+
 </body>
 </html>
