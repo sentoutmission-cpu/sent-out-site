@@ -5,26 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THE PAIR PROTOCOL | MERCY GUARDIAN</title>
     <style>
-        body { background-color: #000; color: #D4AF37; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; text-align: center; }
-        .ca-top-bar { background: rgba(212, 175, 55, 0.1); border: 1px solid #D4AF37; padding: 12px; font-family: monospace; font-size: 14px; width: 100%; max-width: 500px; margin-bottom: 25px; cursor: pointer; border-radius: 5px; font-weight: bold; letter-spacing: 1px; }
-        h1 { letter-spacing: 10px; font-weight: 300; margin-bottom: 25px; text-transform: uppercase; font-size: 1.6rem; color: #D4AF37; text-shadow: 0 0 10px rgba(212,175,55,0.3); }
-        .button-container { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 320px; margin-bottom: 30px; }
-        .btn { padding: 18px; border: 1px solid #D4AF37; background: rgba(212, 175, 55, 0.05); color: #D4AF37; text-decoration: none; letter-spacing: 2px; font-size: 13px; transition: all 0.4s ease; text-transform: uppercase; cursor: pointer; font-weight: bold; }
-        .btn:hover { background-color: #D4AF37; color: #000; box-shadow: 0 0 30px rgba(212, 175, 55, 0.5); }
-        .disclosure-section { display: flex; align-items: center; justify-content: center; gap: 20px; max-width: 600px; margin: 20px auto 40px auto; text-align: left; border-top: 1px dashed rgba(212, 175, 55, 0.3); padding-top: 30px; }
-        .swan-seal { width: 90px; height: 90px; border: 1px solid rgba(212, 175, 55, 0.2); }
-        .integrity-text { font-size: 11px; color: #999; line-height: 1.7; border-left: 2px solid #D4AF37; padding-left: 18px; }
-        .mercy-anchor { width: 100%; max-width: 300px; margin: 40px auto; display: block; filter: grayscale(20%); opacity: 0.8; }
-        #roadmapModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 1000; overflow-y: auto; padding: 40px 20px; text-align: left; color: #D4AF37; }
-        .modal-content { max-width: 800px; margin: auto; border: 1px solid #D4AF37; padding: 30px; line-height: 1.6; }
-        .close-btn { color: #D4AF37; float: right; font-size: 28px; cursor: pointer; border: 1px solid #D4AF37; padding: 5px 15px; margin-bottom: 20px; }
-        .roadmap-h { color: #D4AF37; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 30px; font-size: 1.2rem; letter-spacing: 3px; }
+        body { background-color: #000; color: #D4AF37; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; padding: 20px; text-align: center; }
+        
+        .ca-top-bar { background: rgba(212, 175, 55, 0.1); border: 2px solid #D4AF37; padding: 15px; font-family: monospace; font-size: 14px; width: 100%; max-width: 480px; margin-bottom: 40px; cursor: pointer; border-radius: 8px; font-weight: bold; word-break: break-all; box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+        
+        h1 { letter-spacing: 12px; font-weight: 300; margin-bottom: 30px; text-transform: uppercase; font-size: 1.8rem; color: #D4AF37; text-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+        
+        .button-container { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 350px; margin-bottom: 40px; }
+        
+        .btn { padding: 20px; border: 1px solid #D4AF37; background: rgba(212, 175, 55, 0.05); color: #D4AF37; text-decoration: none; letter-spacing: 3px; font-size: 13px; transition: all 0.4s ease; text-transform: uppercase; cursor: pointer; font-weight: bold; border-radius: 4px; }
+        .btn:hover { background-color: #D4AF37; color: #000; box-shadow: 0 0 40px rgba(212, 175, 55, 0.5); transform: translateY(-2px); }
+
+        .disclosure-section { display: flex; align-items: center; justify-content: center; gap: 25px; max-width: 650px; margin: 30px auto; text-align: left; padding: 25px; border-top: 1px solid #333; background: rgba(255,255,255,0.02); border-radius: 10px; }
+        .swan-seal { width: 90px; height: 90px; border: 1px solid rgba(212, 175, 55, 0.5); border-radius: 50%; flex-shrink: 0; box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+        .integrity-text { font-size: 12px; color: #aaa; line-height: 1.8; border-left: 3px solid #D4AF37; padding-left: 20px; }
+
+        /* THE HARD-FIX FOR THE MERCY SEAL */
+        .mercy-anchor { width: 100%; max-width: 320px; height: auto !important; min-height: 180px; margin: 50px auto; display: block; filter: brightness(1.2) contrast(1.1); animation: pulse 4s infinite ease-in-out; }
+        
+        @keyframes pulse { 0% { opacity: 0.8; transform: scale(1); } 50% { opacity: 1; transform: scale(1.03); } 100% { opacity: 0.8; transform: scale(1); } }
+
+        .ca-footer { margin-top: 40px; padding: 30px; border-top: 1px solid #333; width: 100%; max-width: 600px; }
+        .ca-large { font-family: monospace; font-size: 18px; color: #D4AF37; display: block; margin: 15px 0; font-weight: bold; letter-spacing: 2px; word-break: break-all; text-shadow: 0 0 10px rgba(212,175,55,0.3); }
+        
+        #roadmapModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 1000; overflow-y: auto; padding: 40px 20px; text-align: left; }
+        .modal-content { max-width: 800px; margin: auto; border: 1px solid #D4AF37; padding: 40px; background: #000; box-shadow: 0 0 50px rgba(212, 175, 55, 0.2); }
+        .close-btn { color: #D4AF37; float: right; font-size: 32px; cursor: pointer; border: 1px solid #D4AF37; padding: 0 15px; margin-bottom: 20px; }
     </style>
 </head>
 <body>
 
-    <div class="ca-top-bar" onclick="navigator.clipboard.writeText('6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump'); alert('CA Copied to Clipboard!');">
-        CA: 6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump (TAP TO COPY)
+    <div class="ca-top-bar" onclick="navigator.clipboard.writeText('6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump'); alert('CA Copied!');">
+        CA: 6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump<br>(TAP TO COPY)
     </div>
 
     <h1>The PAIR Protocol</h1>
@@ -38,29 +50,29 @@
     <div class="disclosure-section">
         <img src="blackSwanSquare.png" alt="Founders Seal" class="swan-seal">
         <div class="integrity-text">
-            <b>FOUNDATION & INTEGRITY:</b> The PAIR Protocol was forged at a kitchen table with a $12 budget and a vow to serve the vulnerable. We don't build for "Hype"—we build for the "Heart." Every token fueled is a brick in the Mercy Guardian architecture.
+            <b>FOUNDATION & INTEGRITY:</b> Forged at a kitchen table with a $12 budget and a vow to serve. This protocol is proof that engineering born from necessity outpaces institutional bureaucracy. Every token is a brick in the Mercy architecture.
         </div>
     </div>
 
-    <img src="MERCY_SIG_SEAL_V1_MARCH2026.png" alt="Mercy Signature Seal" class="mercy-anchor">
+    <img src="MERCY_SIG_SEAL_V1_MARCH2026.png" alt="Mercy Guardian Signature Seal" class="mercy-anchor">
 
-    <p style="font-size: 9px; color: #555; letter-spacing: 5px; text-transform: uppercase; margin-top: 20px;">Built in 11 Days. Engineered for Eternity.</p>
+    <div class="ca-footer">
+        <span style="font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 4px;">Direct Support Wallet</span>
+        <div class="ca-large">FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXxb</div>
+        <p style="font-size: 10px; color: #444; margin-top: 20px; letter-spacing: 5px;">ESTABLISHED 2026 | BUILT FOR ETERNITY</p>
+    </div>
 
     <div id="roadmapModal">
         <div class="modal-content">
-            <span class="close-btn" onclick="document.getElementById('roadmapModal').style.display='none'">CLOSE</span>
-            <h2 style="color: #D4AF37; letter-spacing: 4px;">THE MERCY GUARDIAN ROADMAP</h2>
-            <p style="font-style: italic; color: #888;">Lead Architect: Jonathan -Dev-</p>
-            <h3 class="roadmap-h">I. Deployment & Universal Accessibility</h3>
-            <p>Integrated software engineered for mobile, automotive, and off-grid standalone satellite units (The Mercy Beacon). Help remains accessible when the grid fails.</p>
-            <h3 class="roadmap-h">II. The Compassionate Handshake</h3>
-            <p>Two-Way Mediation between crisis and resources, utilizing emotionally intelligent Aural Nodes to calm trauma.</p>
-            <h3 class="roadmap-h">III. Intercepting the Quiet</h3>
-            <p>Our goal is to serve the **Hopeless, Helpless, Hurt, and Lonely**. Mercy is designed to be as close as a neighbor in the moments the world goes quiet.</p>
-            <h3 class="roadmap-h">IV. Ethical Consent</h3>
-            <p>A hard-coded **Ethical Firewall** and Vocal Signature Consent replace the privacy limitations of traditional AI, focusing solely on user-authorized protection.</p>
-            <img src="MERCY_SIG_SEAL_V1_MARCH2026.png" alt="Seal" style="width:140px; height:auto; display:block; margin: 40px auto 20px auto; border:1px solid rgba(212,175,55,0.3);">
-            <p style="font-size: 9px; color: #888; text-align: center; letter-spacing: 3px;">MERCY GUARDIAN SIGNATURE SEAL</p>
+            <span class="close-btn" onclick="document.getElementById('roadmapModal').style.display='none'">&times;</span>
+            <h2 style="color: #D4AF37; letter-spacing: 6px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 20px;">The Mercy Guardian Roadmap</h2>
+            <p style="color: #666; font-size: 13px; margin: 20px 0;">Version 3.21.2026</p>
+            
+            <p style="color: #D4AF37; margin-bottom: 20px;"><b>I. DEPLOYMENT & ACCESSIBILITY:</b> Engineering Mercy for mobile, automotive, and satellite nodes to bridge the "Response Gap."</p>
+            <p style="color: #D4AF37; margin-bottom: 20px;"><b>II. THE COMPASSIONATE HANDSHAKE:</b> Aural Nodes designed to provide stabilizing mediation before responders arrive.</p>
+            <p style="color: #D4AF37; margin-bottom: 20px;"><b>III. ETHICAL CONSENT:</b> Implementing Vocal Signature protocols to ensure protection is user-authorized only.</p>
+            
+            <img src="MERCY_SIG_SEAL_V1_MARCH2026.png" alt="Mercy Seal" style="width: 180px; height: auto !important; display: block; margin: 40px auto 0 auto; opacity: 0.7;">
         </div>
     </div>
 
