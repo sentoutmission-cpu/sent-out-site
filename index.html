@@ -3,207 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE MERCY PROGRAM | DEPIN SAFETY INFRASTRUCTURE</title>
+    <title>THE PAIR PROTOCOL | DEPIN SAFETY INFRASTRUCTURE</title>
     <style>
         :root {
-            --charcoal: #121212;
-            --nickel: #b5b5b5;
+            --charcoal: #0f0f0f;
+            --nickel: #d1d1d1;
             --pure-white: #ffffff;
-            --blood-red: #cc0000;
-            --navy-deep: #0a0e14;
+            --safety-red: #ff3b3b;
         }
 
         body {
             margin: 0;
             padding: 0;
             background-color: var(--charcoal);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             color: var(--pure-white);
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* The Background Pulse */
-        .background-glow {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100vw;
-            height: 100vh;
-            background: radial-gradient(circle, rgba(181,181,181,0.05) 0%, rgba(10,14,20,1) 70%);
-            z-index: -1;
-            animation: pulse-bg 8s infinite ease-in-out;
-        }
-
-        @keyframes pulse-bg {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
         }
 
         header {
-            margin-top: 40px;
+            margin-top: 50px;
             text-align: center;
         }
 
         .main-title {
             font-size: 2.2rem;
-            letter-spacing: 8px;
+            letter-spacing: 10px;
             color: var(--nickel);
-            font-weight: 300;
+            font-weight: 200;
             text-transform: uppercase;
-            margin-bottom: 10px;
         }
 
-        /* The Mercy Signature Seal - The Heart of the Page */
         .seal-container {
-            margin: 20px auto;
-            max-width: 600px;
-            width: 90%;
-            display: flex;
-            justify-content: center;
+            margin: 30px auto;
+            max-width: 550px;
+            width: 85%;
         }
 
         .mercy-seal {
             width: 100%;
             height: auto;
-            filter: drop-shadow(0 0 20px rgba(181,181,181,0.2));
-            /* Subtle breathing animation for the heart */
-            animation: heart-throttle 4s infinite ease-in-out;
+            filter: drop-shadow(0 0 15px rgba(255,255,255,0.1));
+            animation: heart-throttle 5s infinite ease-in-out;
         }
 
         @keyframes heart-throttle {
-            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(181,181,181,0.2)); }
-            50% { transform: scale(1.02); filter: drop-shadow(0 0 35px rgba(204,0,0,0.15)); }
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.01); opacity: 1; }
         }
 
-        /* Buttons - Glassmorphism style */
         .nav-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            width: 85%;
-            max-width: 450px;
-            margin-top: 20px;
+            gap: 15px;
+            width: 90%;
+            max-width: 400px;
+            margin-top: 10px;
         }
 
         .btn {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(181, 181, 181, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(209, 209, 209, 0.3);
             color: var(--nickel);
-            padding: 18px;
+            padding: 20px;
             text-align: center;
             text-decoration: none;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
+            font-size: 1rem;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-            font-weight: 400;
+            transition: 0.3s;
+            backdrop-filter: blur(10px);
         }
 
         .btn:hover {
-            background: rgba(181, 181, 181, 0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-color: var(--pure-white);
             color: var(--pure-white);
-            letter-spacing: 4px;
-            box-shadow: 0 0 15px rgba(181, 181, 181, 0.1);
         }
 
-        /* Footer - Foundation & Integrity */
         .footer-section {
-            margin: 50px 20px 80px 20px;
-            padding: 30px;
-            border-top: 1px solid rgba(181, 181, 181, 0.2);
+            margin: 60px 20px;
             max-width: 800px;
             text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 40px;
         }
 
-        .foundation-text {
-            font-size: 1rem;
-            line-height: 1.6;
+        .mission-statement {
+            font-size: 1.1rem;
             color: var(--nickel);
-            max-width: 650px;
-            margin: 0 auto 30px auto;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            font-weight: 300;
         }
 
-        .bold-white {
-            color: var(--pure-white);
-            font-weight: 600;
-        }
+        .bold-white { color: var(--pure-white); font-weight: 600; }
 
-        .official-data {
+        .data-box {
             background: #000;
-            padding: 25px;
-            border: 1px solid #333;
-            display: inline-block;
+            padding: 30px;
+            border: 1px solid #222;
             width: 100%;
-            box-sizing: border-box;
         }
 
-        .data-label {
-            font-size: 0.8rem;
-            letter-spacing: 3px;
-            color: #666;
-            margin-bottom: 5px;
+        .label {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            color: #555;
+            margin-bottom: 10px;
             display: block;
         }
 
-        .data-value {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1.8rem; /* Double-sized as requested */
-            font-weight: bold;
+        .value {
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 1.6rem;
+            font-weight: 700;
             color: var(--pure-white);
             word-break: break-all;
+            margin-bottom: 25px;
             display: block;
-            margin-bottom: 20px;
-        }
-
-        .data-value:last-child {
-            margin-bottom: 0;
-        }
-
-        @media (max-width: 600px) {
-            .data-value { font-size: 1.2rem; }
-            .main-title { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="background-glow"></div>
-
     <header>
-        <div class="main-title">The Mercy Program</div>
+        <div class="main-title">THE PAIR PROTOCOL</div>
     </header>
 
     <div class="seal-container">
-        <img src="MERCY_SIG_SEAL_V1_MARCH2026.png" alt="Mercy Signature Seal" class="mercy-seal">
+        <img src="MERCY_SIG_SEAL_V1_MARCH2026.png" alt="MERCY SEAL" class="mercy-seal">
     </div>
 
     <nav class="nav-container">
-        <a href="https://your-token-link.com" class="btn">Fuel the Mission (PAIR)</a>
-        <a href="#" class="btn">The Mercy Blueprint</a>
-        <a href="#" class="btn">The Vulnerability Shield</a>
-        <a href="mailto:sentoutmission@gmail.com" class="btn">Strategic Inquiry</a>
+        <a href="https://join.pump.fun/HSag/8omkz7ui" class="btn">FUEL THE MISSION (PAIR)</a>
+        <a href="#" class="btn">THE MERCY BLUEPRINT</a>
+        <a href="#" class="btn">VULNERABILITY SHIELD</a>
+        <a href="mailto:sentoutmission@gmail.com" class="btn">STRATEGIC INQUIRY</a>
     </nav>
 
     <section class="footer-section">
-        <p class="foundation-text">
-            <span class="bold-white">THE $12 VOW:</span> Launched from a $12 kitchen-table proof of concept. Building the global infrastructure for autonomous life preservation. 
+        <p class="mission-statement">
+            <span class="bold-white">STRATEGIC ORIGIN:</span> Built on a foundational vow to the vulnerable. The PAIR Protocol is the world’s first autonomous DePIN infrastructure for life preservation.
             <br><br>
-            <span class="bold-white">FIRST-TO-MARKET:</span> Verbal Biometric Authorization & DePIN Safety Protocols.
+            <span class="bold-white">GROUNDBREAKING:</span> First-to-Market Verbal Biometric Authorization and Response Logic.
         </p>
 
-        <div class="official-data">
-            <span class="data-label">OFFICIAL CA</span>
-            <span class="data-value">6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump</span>
+        <div class="data-box">
+            <span class="label">OFFICIAL CONTRACT ADDRESS</span>
+            <span class="value">6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump</span>
             
-            <span class="data-label">DIRECT SUPPORT</span>
-            <span class="data-value">FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXXb</span>
+            <span class="label">DIRECT SUPPORT</span>
+            <span class="value">FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXXb</span>
         </div>
     </section>
 
