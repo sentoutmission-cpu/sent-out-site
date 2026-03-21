@@ -1,68 +1,211 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE PAIR PROTOCOL | THE SENT OUT MISSION</title>
+    <title>THE MERCY PROGRAM | DEPIN SAFETY INFRASTRUCTURE</title>
     <style>
-        body { background-color: #000; color: #D4AF37; font-family: 'Segoe UI', sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; text-align: center; }
-        h1 { letter-spacing: 8px; font-weight: 300; margin-bottom: 40px; text-transform: uppercase; font-size: 1.2rem; color: #D4AF37; }
-        .button-container { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 300px; margin-bottom: 30px; }
-        .btn { padding: 18px; border: 1px solid #D4AF37; background: rgba(212, 175, 55, 0.05); color: #D4AF37; text-decoration: none; letter-spacing: 2px; font-size: 12px; transition: all 0.4s ease; text-transform: uppercase; cursor: pointer; }
-        .btn:hover { background-color: #D4AF37; color: #000; box-shadow: 0 0 25px rgba(212, 175, 55, 0.4); }
-        #roadmapModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 1000; overflow-y: auto; padding: 40px 20px; text-align: left; }
-        .modal-content { max-width: 800px; margin: auto; border: 1px solid #D4AF37; padding: 30px; line-height: 1.6; }
-        .close-btn { color: #D4AF37; float: right; font-size: 28px; cursor: pointer; border: 1px solid #D4AF37; padding: 5px 15px; margin-bottom: 20px; }
-        .roadmap-h { color: #D4AF37; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 30px; font-size: 1.1rem; letter-spacing: 2px; }
-        .disclosure-box { margin: 20px auto; padding: 20px; border: 1px dashed rgba(212, 175, 55, 0.3); max-width: 400px; font-size: 11px; color: #888; text-align: left; line-height: 1.6; }
-        .ca-display { color: #D4AF37; font-family: monospace; font-size: 10px; display: block; word-break: break-all; margin-top: 10px; border-top: 1px solid #333; padding-top: 10px; text-align: center; }
+        :root {
+            --charcoal: #121212;
+            --nickel: #b5b5b5;
+            --pure-white: #ffffff;
+            --blood-red: #cc0000;
+            --navy-deep: #0a0e14;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--charcoal);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: var(--pure-white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* The Background Pulse */
+        .background-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle, rgba(181,181,181,0.05) 0%, rgba(10,14,20,1) 70%);
+            z-index: -1;
+            animation: pulse-bg 8s infinite ease-in-out;
+        }
+
+        @keyframes pulse-bg {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        header {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .main-title {
+            font-size: 2.2rem;
+            letter-spacing: 8px;
+            color: var(--nickel);
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        /* The Mercy Signature Seal - The Heart of the Page */
+        .seal-container {
+            margin: 20px auto;
+            max-width: 600px;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mercy-seal {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 20px rgba(181,181,181,0.2));
+            /* Subtle breathing animation for the heart */
+            animation: heart-throttle 4s infinite ease-in-out;
+        }
+
+        @keyframes heart-throttle {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(181,181,181,0.2)); }
+            50% { transform: scale(1.02); filter: drop-shadow(0 0 35px rgba(204,0,0,0.15)); }
+        }
+
+        /* Buttons - Glassmorphism style */
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 85%;
+            max-width: 450px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(181, 181, 181, 0.4);
+            color: var(--nickel);
+            padding: 18px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            font-weight: 400;
+        }
+
+        .btn:hover {
+            background: rgba(181, 181, 181, 0.1);
+            border-color: var(--pure-white);
+            color: var(--pure-white);
+            letter-spacing: 4px;
+            box-shadow: 0 0 15px rgba(181, 181, 181, 0.1);
+        }
+
+        /* Footer - Foundation & Integrity */
+        .footer-section {
+            margin: 50px 20px 80px 20px;
+            padding: 30px;
+            border-top: 1px solid rgba(181, 181, 181, 0.2);
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .foundation-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--nickel);
+            max-width: 650px;
+            margin: 0 auto 30px auto;
+        }
+
+        .bold-white {
+            color: var(--pure-white);
+            font-weight: 600;
+        }
+
+        .official-data {
+            background: #000;
+            padding: 25px;
+            border: 1px solid #333;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .data-label {
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            color: #666;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .data-value {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.8rem; /* Double-sized as requested */
+            font-weight: bold;
+            color: var(--pure-white);
+            word-break: break-all;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .data-value:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .data-value { font-size: 1.2rem; }
+            .main-title { font-size: 1.5rem; }
+        }
     </style>
 </head>
 <body>
-    <h1>The PAIR Protocol</h1>
-    <div class="button-container">
-        <a href="https://pump.fun/coin/6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump" target="_blank" class="btn" style="border: 2px solid #D4AF37; font-weight: bold; background: rgba(212, 175, 55, 0.1);">Fuel the Mission (PAIR)</a>
-        <a href="#" class="btn" onclick="document.getElementById('roadmapModal').style.display='block'">View Protocol Roadmap</a>
-        <a href="https://twitter.com/sentoutmission" target="_blank" class="btn">Mission Updates (X)</a>
-        <a href="mailto:Sentoutmission@gmail.com" class="btn">Strategic Inquiry</a>
+
+    <div class="background-glow"></div>
+
+    <header>
+        <div class="main-title">The Mercy Program</div>
+    </header>
+
+    <div class="seal-container">
+        <img src="MERCY_SIG_SEAL_V1_MARCH2026.png" alt="Mercy Signature Seal" class="mercy-seal">
     </div>
-    <div class="disclosure-box">
-        <span style="letter-spacing: 2px; text-transform: uppercase; color: #D4AF37; font-weight: bold; display: block; margin-bottom: 10px; text-align: center;">Foundation & Integrity</span>
-        • <b>Organic Growth:</b> Launched with a $12 kitchen-table POC. We focus 100% on the build. <br><br>
-        • <b>Ethical Guardrails:</b> Zero-tolerance for predatory or explicit misuse. PAIR is for Mercy and Safety only.
-        <div class="ca-display">
-            OFFICIAL CA: 6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump<br>
-            DIRECT SUPPORT: FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXxb
+
+    <nav class="nav-container">
+        <a href="https://your-token-link.com" class="btn">Fuel the Mission (PAIR)</a>
+        <a href="#" class="btn">The Mercy Blueprint</a>
+        <a href="#" class="btn">The Vulnerability Shield</a>
+        <a href="mailto:sentoutmission@gmail.com" class="btn">Strategic Inquiry</a>
+    </nav>
+
+    <section class="footer-section">
+        <p class="foundation-text">
+            <span class="bold-white">THE $12 VOW:</span> Launched from a $12 kitchen-table proof of concept. Building the global infrastructure for autonomous life preservation. 
+            <br><br>
+            <span class="bold-white">FIRST-TO-MARKET:</span> Verbal Biometric Authorization & DePIN Safety Protocols.
+        </p>
+
+        <div class="official-data">
+            <span class="data-label">OFFICIAL CA</span>
+            <span class="data-value">6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump</span>
+            
+            <span class="data-label">DIRECT SUPPORT</span>
+            <span class="data-value">FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXXb</span>
         </div>
-    </div>
-    <div id="roadmapModal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="document.getElementById('roadmapModal').style.display='none'">CLOSE</span>
-            <h2 style="color: #D4AF37; letter-spacing: 4px;">MASTER SPECIFICATION</h2>
-            <p style="font-style: italic; color: #888;">Lead Architect: Jonathan -Dev-</p>
-            <h3 class="roadmap-h">I. Deployment & Universal Accessibility</h3>
-            <p>The PAIR Protocol is <b>Standalone/Integrated Universal software</b> engineered for deployment across mobile, automotive, and marine systems. By utilizing decentralized infrastructure, we ensure that help remains accessible even in traditional grid failures.</p>
-            <h3 class="roadmap-h">II. The Humanitarian Handshake</h3>
-            <p>We facilitate <b>Two-Way Mediation</b> between those in crisis and the resources they need. This handshake is the functional core of the "Person in the Machine"—ensuring that every signal for help receives a verified and immediate response.</p>
-            <h3 class="roadmap-h">III. The Interaction Philosophy: Precise Mercy</h3>
-            <p>Our software is built to serve the <b>Hopeless, Helpless, Hurt, and Lonely.</b> We deliver <b>Precise Mercy</b>—combining the watchful heart of a guardian with the surgical precision of a doctor. We aim to be as close as a neighbor in the moments the world goes quiet.</p>
-            <h3 class="roadmap-h">IV. Ethical Autonomy</h3>
-            <p>The Lead Architect maintains operational autonomy to protect the dignity of the mission. The PAIR Protocol features a hard-coded <b>Ethical Firewall</b> to prevent misuse, focusing solely on providing a universal safety net for the vulnerable.</p>
-        </div>
-    </div>
-    <img src="blackSwanSquare.png" alt="ARCHITECT SEAL" class="signature-img" style="width:160px; height:auto; border:1px solid rgba(212,175,55,0.2); margin-top:40px;">
-    <p style="font-size: 9px; color: #555; letter-spacing: 4px; text-transform: uppercase; margin-top: 10px;">Built in 7 Days. Engineered for Eternity.</p>
+    </section>
+
 </body>
 </html>
- 
-
-Jonathan Culver
-(President)
-Fast Air Heating and Air
-12898 Warehouse Road
-Lawrenceville, Illinois 62439
-618-240-0506
-jonathan1culver@gmail.com
-www.fastairandheat.net
-
