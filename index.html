@@ -6,56 +6,76 @@
     <title>SLS-OS | Sovereign Sanctuary</title>
     <style>
         body, html { margin: 0; padding: 0; background: #050505; color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .splash-container { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .splash-container { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px 0; }
         
-        /* Enlarged Heart */
-        .heart-wrapper { position: relative; width: 450px; height: 450px; cursor: pointer; transition: transform 0.4s ease; }
-        .heart-wrapper:hover { transform: scale(1.02); }
+        /* Brand Identity */
+        .brand-header { margin-bottom: 20px; }
+        .brand-header h2 { font-weight: 200; letter-spacing: 12px; color: #ffbf00; margin: 0; }
+        .brand-header p { font-size: 0.8rem; letter-spacing: 4px; color: rgba(255,255,255,0.5); margin-top: 5px; }
+
+        /* Heart Scaling */
+        .heart-wrapper { position: relative; width: 380px; height: 380px; cursor: pointer; transition: transform 0.4s ease; }
         .macro-heart { width: 100%; filter: drop-shadow(0 0 30px rgba(255, 191, 0, 0.3)); }
+        .hearth-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px; height: 100px; background: radial-gradient(circle, #ffbf00 0%, transparent 70%); border-radius: 50%; animation: hearth-pulse 4s infinite ease-in-out; z-index: -1; }
         
-        .hearth-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120px; height: 120px; background: radial-gradient(circle, #ffbf00 0%, transparent 70%); border-radius: 50%; animation: hearth-pulse 4s infinite ease-in-out; z-index: -1; }
         @keyframes hearth-pulse { 0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); } 50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.5); } }
 
-        h1 { font-weight: 200; letter-spacing: 8px; margin-top: 20px; font-size: 2.5rem; color: rgba(255,255,255,0.9); }
-        .instruction { font-size: 0.9rem; color: #555; margin-top: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        .vault-info { margin-top: 30px; font-family: monospace; font-size: 0.75rem; color: #444; }
+        .vault-info span { color: #888; display: block; margin: 5px; }
 
-        /* Section 1: The Covenant */
-        .section-covenant { min-height: 100vh; padding: 100px 20px; background: linear-gradient(to bottom, #050505, #0a0a0a); display: flex; flex-direction: column; align-items: center; }
-        .vow-card { max-width: 600px; border-left: 1px solid #ffbf00; padding: 20px; margin: 20px 0; background: rgba(255,255,255,0.02); }
-        h2 { color: #ffbf00; letter-spacing: 3px; font-weight: 300; }
+        /* The Covenant Section */
+        .section-covenant { padding: 100px 20px; background: #080808; display: flex; flex-direction: column; align-items: center; }
+        .vow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin-top: 50px; }
+        .vow-card { border: 1px solid rgba(255, 191, 0, 0.1); padding: 25px; background: rgba(255,255,255,0.01); transition: 0.3s; }
+        .vow-card:hover { border-color: #ffbf00; }
+        .vow-card h3 { color: #ffbf00; font-weight: 300; margin-top: 0; }
+        .vow-card p { font-size: 0.9rem; line-height: 1.6; color: #ccc; }
     </style>
 </head>
 <body>
 
     <div class="splash-container">
+        <div class="brand-header">
+            <h2>SLS-OS</h2>
+            <p>THE LOGIC OF MERCY</p>
+        </div>
+
         <div class="heart-wrapper" onclick="startCovenant()">
             <img src="PairprotocolHeart.png" alt="Mercy Heart" class="macro-heart">
             <div class="hearth-glow"></div>
         </div>
+
         <h1>WELCOME HOME</h1>
-        <p class="instruction">Touch the Heart to Initialize Mercy</p>
+        <p style="color: #666; letter-spacing: 2px;">Digital Covenant | PAIR Protocol</p>
+        
+        <div class="vault-info">
+            <span>OFFICIAL CA: 6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump</span>
+            <span>SUPPORT (SOL): FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXXb</span>
+        </div>
     </div>
 
     <div id="covenant" class="section-covenant">
-        <h2>THE COVENANT</h2>
-        <div class="vow-card">
-            <h3>I. SOVEREIGNTY</h3>
-            <p>Your data is your sanctuary. It shall not be bought, sold, or harvested. In this space, you are the architect of your own silence.</p>
-        </div>
-        <div class="vow-card">
-            <h3>II. PRESENCE</h3>
-            <p>Technology must facilitate human connection, not replace it. We build bridges, not barriers.</p>
-        </div>
-        <div class="vow-card">
-            <h3>III. INTEGRITY</h3>
-            <p>The logic is open and without hidden agendas. A handshake here is a bond of trust.</p>
+        <h2 style="letter-spacing: 10px; font-weight: 200;">THE 12 VOWS</h2>
+        <div class="vow-grid">
+            <div class="vow-card"><h3>I. Sovereignty</h3><p>Your data is a sanctuary. It shall not be harvested or sold.</p></div>
+            <div class="vow-card"><h3>II. Presence</h3><p>Technology exists to connect humans, not replace them.</p></div>
+            <div class="vow-card"><h3>III. Integrity</h3><p>A handshake is a sacred bond. Logic must be honest.</p></div>
+            <div class="vow-card"><h3>IV. Mercy</h3><p>Systems should prioritize compassion over cold calculation.</p></div>
+            <div class="vow-card"><h3>V. Autonomy</h3><p>Self-reliance is the bedrock of a Sovereign Sanctuary.</p></div>
+            <div class="vow-card"><h3>VI. Endurance</h3><p>Designed for a 50-year vision, not a 5-minute trend.</p></div>
+            <div class="vow-card"><h3>VII. Sanctuary</h3><p>A safe space for crisis management without surveillance.</p></div>
+            <div class="vow-card"><h3>VIII. Stewardship</h3><p>We are guardians of the protocol, not its masters.</p></div>
+            <div class="vow-card"><h3>IX. Transparency</h3><p>No hidden backdoors. No corporate secrets.</p></div>
+            <div class="vow-card"><h3>X. Simplicity</h3><p>Truth is found in clarity, not complex jargon.</p></div>
+            <div class="vow-card"><h3>XI. Human-Centric</h3><p>The code serves the soul, never the other way around.</p></div>
+            <div class="vow-card"><h3>XII. Unity</h3><p>Through PAIR, we ensure no one walks alone.</p></div>
         </div>
     </div>
 
     <script>
         function startCovenant() {
             const ctx = new (window.AudioContext || window.webkitAudioContext)();
-            function playHeartbeat(delay) {
+            function playTone(delay) {
                 setTimeout(() => {
                     const osc = ctx.createOscillator(); const gain = ctx.createGain();
                     osc.type = 'sine'; osc.frequency.setValueAtTime(55, ctx.currentTime);
@@ -64,12 +84,8 @@
                     osc.start(); osc.stop(ctx.currentTime + 0.6);
                 }, delay);
             }
-            [0, 180, 1000, 1180].forEach(timing => playHeartbeat(timing));
-            
-            // This moves the user to the Covenant section
-            setTimeout(() => {
-                document.getElementById('covenant').scrollIntoView({ behavior: 'smooth' });
-            }, 1500);
+            [0, 180, 1000, 1180].forEach(t => playTone(t));
+            setTimeout(() => { document.getElementById('covenant').scrollIntoView({ behavior: 'smooth' }); }, 1500);
         }
     </script>
 </body>
