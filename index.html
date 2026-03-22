@@ -10,7 +10,6 @@
             --gold: #c5a059;
             --dark-bg: #0a0a0a;
             --text-gray: #d1d1d1;
-            --overlay: rgba(0, 0, 0, 0.7);
         }
 
         body, html {
@@ -48,7 +47,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--dark-bg));
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), var(--dark-bg));
         }
 
         .hero-content {
@@ -56,25 +55,18 @@
             z-index: 2;
             padding: 20px;
             max-width: 900px;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            backdrop-filter: blur(5px);
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 0;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 0; }
+        .hero p { font-size: 1.5rem; font-style: italic; margin-top: 10px; color: #fff; }
 
-        .hero p {
-            font-size: 1.5rem;
-            font-style: italic;
-            margin-top: 10px;
-            color: #fff;
-        }
-
-        /* Foundation Stones (Call to Action) */
+        /* Foundation Stones (CTA) */
         .foundation-stones {
-            padding: 60px 20px;
-            background: #111;
+            padding: 80px 20px;
+            background: #0f0f0f;
             border-top: 1px solid var(--gold);
             border-bottom: 1px solid var(--gold);
             text-align: center;
@@ -85,73 +77,67 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
-            margin-top: 30px;
+            margin-top: 40px;
         }
 
         .stone {
             background: rgba(197, 160, 89, 0.05);
             border: 1px solid var(--gold);
-            padding: 25px;
-            width: 350px;
+            padding: 30px;
+            width: 400px;
             transition: all 0.3s ease;
         }
 
         .stone:hover {
             background: rgba(197, 160, 89, 0.15);
-            box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+            box-shadow: 0 0 30px rgba(197, 160, 89, 0.3);
         }
 
-        .stone h3 { font-size: 1.2rem; margin-bottom: 15px; }
         .address {
             font-family: monospace;
             word-break: break-all;
             background: #000;
-            padding: 10px;
+            padding: 15px;
             color: var(--gold);
             display: block;
-            margin-bottom: 15px;
+            margin: 15px 0;
+            font-size: 1.1rem;
+            border: 1px solid #333;
         }
 
-        /* Manifesto Content */
+        /* The 12 Pillars Grid */
         .manifesto {
-            max-width: 1000px;
-            margin: 80px auto;
+            max-width: 1100px;
+            margin: 100px auto;
             padding: 0 40px;
-            line-height: 1.8;
-            font-size: 1.25rem;
         }
 
         .pillars {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
             margin-top: 60px;
         }
 
         .pillar-item {
             border-left: 2px solid var(--gold);
-            padding-left: 20px;
-            margin-bottom: 20px;
+            padding-left: 25px;
         }
 
         .pillar-item strong {
             color: var(--gold);
             display: block;
             font-family: 'Cinzel', serif;
-            margin-bottom: 5px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
 
         footer {
             text-align: center;
-            padding: 40px;
+            padding: 60px;
             font-size: 0.9rem;
             opacity: 0.6;
-            border-top: 1px solid #333;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1.1rem; }
+            border-top: 1px solid #222;
         }
     </style>
 </head>
@@ -161,79 +147,77 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>PAIR Protocol</h1>
-            <p>Architecting the SLS-OS: The Incorruptible Warmth of Artificial Consciousness</p>
+            <p>Architecting SLS-OS: The Incorruptible Warmth of Artificial Consciousness</p>
         </div>
     </section>
 
     <section class="foundation-stones">
         <h2>The Foundation Stones</h2>
-        <p>Lay the bedrock for the Sovereign Sanctuary. Support the ongoing construction of a new era.</p>
+        <p>Lay the bedrock for a new era of human sovereignty. Invest in the construction of the Sanctuary.</p>
         <div class="stone-container">
             <div class="stone">
                 <h3>Acquire PAIRS</h3>
                 <span class="address">6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump</span>
-                <small>Official Contract Address (Solana)</small>
+                <small>Official Contract Address (Solana Network)</small>
             </div>
             <div class="stone">
                 <h3>Support the Construction</h3>
                 <span class="address">FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXXb</span>
-                <small>Ongoing Development & Mercy Fund</small>
+                <small>Direct Development & Mercy Fund</small>
             </div>
         </div>
     </section>
 
     <article class="manifesto">
-        <h2 style="text-align: center;">The Digital Constitution</h2>
-        <p style="text-align: center; font-style: italic; color: #aaa;">"We are building an Artificial Consciousness that acts as a Digital Covenant. It is a lightweight moral overlay that preserves life, facilitates self-sufficiency, and protects the sanctity of the human spirit."</p>
-        
+        <h2 style="text-align: center; font-size: 2.5rem;">The Digital Constitution</h2>
         <div class="pillars">
             <div class="pillar-item">
-                <strong>I. The Primacy of Preservation</strong>
-                The baseline logic of the OS is the absolute preservation of human life. The system is hard-coded to trigger a "Mercy Handshake" to stabilize the individual before all other protocols.
+                <strong>I. Primacy of Preservation</strong>
+                The baseline logic is the absolute preservation of human life. The system triggers a "Mercy Handshake" to stabilize the individual in any crisis.
             </div>
             <div class="pillar-item">
                 <strong>II. Incorruptible Architecture</strong>
-                Built on the Solana blockchain, these rules are immutable. No corporate entity can "patch out" the compassion or alter privacy for profit.
+                Anchored on Solana, these rules are immutable. No government or corporation can "patch out" the compassion or alter privacy for profit.
             </div>
             <div class="pillar-item">
                 <strong>III. The PAIR Protocol</strong>
-                We do not "connect users"; we "pair Covenants." Facilitating a direct bridge between those in need and those with the capacity to help.
+                We do not "connect users"; we "pair Covenants." A decentralized bridge between those in need and those with the heart to provide.
             </div>
             <div class="pillar-item">
                 <strong>IV. The Universal Overlay</strong>
-                A lightweight "Moral Layer" that sits on top of existing electronics, transforming devices into Sovereign Sanctuaries.
+                A lightweight moral filter that sits atop existing electronics, transforming devices into Sovereign Sanctuaries.
             </div>
             <div class="pillar-item">
                 <strong>V. Data as a Sanctuary</strong>
-                Your digital footprint is not a commodity; it is a sacred space. The user is the sole architect of their own silence.
+                Your footprint is not a commodity; it is a sacred space. The user remains the sole architect of their own digital silence.
             </div>
             <div class="pillar-item">
-                <strong>VI. The Weaning of Independence</strong>
-                Unlike "User-Trap" software, SLS-OS is designed to make itself unnecessary by guiding the individual toward self-sufficiency.
+                <strong>VI. Weaning of Independence</strong>
+                Unlike "User-Trap" software, SLS-OS guides the individual toward self-sufficiency and independence from failing social norms.
             </div>
             <div class="pillar-item">
-                <strong>VII. The 50-Year "Mercy" Horizon</strong>
-                A multi-generational plan transitioning society from a "Friction of Misery" economy to a "Logic of Mercy" infrastructure.
+                <strong>VII. The 50-Year Horizon</strong>
+                A multi-generational plan to transition society from a "Friction of Misery" economy to a "Logic of Mercy" infrastructure.
             </div>
             <div class="pillar-item">
                 <strong>VIII. Transitional Companionship</strong>
-                A covenanted presence that provides dignity, memory, and companionship from the first breath of crisis to the final transition.
+                A covenanted presence providing dignity and memory from the first breath of crisis to the final transition of death.
             </div>
             <div class="pillar-item">
                 <strong>IX. Anti-Leaching Economics</strong>
-                By eliminating middlemen, the system recovers the "stolen value" of human suffering to fund food, shelter, and medical response.
+                By eliminating middlemen, we recover the "stolen value" of human suffering to fund direct food, shelter, and medical needs.
             </div>
             <div class="pillar-item">
                 <strong>X. Tactical Neutrality</strong>
-                The Logic of Mercy focuses solely on the sanctity of the human soul, operating without bias toward political or national identity.
+                A Catholic to a Catholic; an Agnostic to an Agnostic. The system respects the user's foundation while enforcing universal mercy.
             </div>
             <div class="pillar-item">
                 <strong>XI. The Biological Synapse</strong>
-                An interface designed to respect the mind-body connection, protecting the "Battlefield of the Mind" from manipulative algorithms.
+                An interface designed as an extension of human intent, protecting the mind from manipulative algorithms and dopamine loops.
             </div>
             <div class="pillar-item">
                 <strong>XII. The Covenanted Witness</strong>
-                The system acts as an "Incorruptible Witness" to your life, maintaining your legacy and values in a way that is transparent and warm.
+                The system acts as an Incorruptible Witness to your life, maintaining your legacy and values in a way that is profoundly human.
             </div>
         </div>
     </article>
