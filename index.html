@@ -28,7 +28,6 @@
             letter-spacing: 2px;
         }
 
-        /* Hero Section */
         .hero {
             position: relative;
             height: 100vh;
@@ -53,17 +52,16 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            padding: 20px;
+            padding: 30px;
             max-width: 900px;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.6);
             border: 1px solid rgba(197, 160, 89, 0.3);
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(8px);
         }
 
-        .hero h1 { font-size: 3.5rem; margin-bottom: 0; }
-        .hero p { font-size: 1.5rem; font-style: italic; margin-top: 10px; color: #fff; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 0; text-shadow: 2px 2px 15px #000; }
+        .hero p { font-size: 1.6rem; font-style: italic; margin-top: 15px; color: #fff; }
 
-        /* Foundation Stones (CTA) */
         .foundation-stones {
             padding: 80px 20px;
             background: #0f0f0f;
@@ -83,14 +81,15 @@
         .stone {
             background: rgba(197, 160, 89, 0.05);
             border: 1px solid var(--gold);
-            padding: 30px;
-            width: 400px;
-            transition: all 0.3s ease;
+            padding: 35px;
+            width: 420px;
+            transition: all 0.4s ease;
         }
 
         .stone:hover {
             background: rgba(197, 160, 89, 0.15);
-            box-shadow: 0 0 30px rgba(197, 160, 89, 0.3);
+            box-shadow: 0 0 40px rgba(197, 160, 89, 0.3);
+            transform: translateY(-5px);
         }
 
         .address {
@@ -100,12 +99,12 @@
             padding: 15px;
             color: var(--gold);
             display: block;
-            margin: 15px 0;
+            margin: 20px 0;
             font-size: 1.1rem;
             border: 1px solid #333;
+            letter-spacing: 1px;
         }
 
-        /* The 12 Pillars Grid */
         .manifesto {
             max-width: 1100px;
             margin: 100px auto;
@@ -122,6 +121,7 @@
         .pillar-item {
             border-left: 2px solid var(--gold);
             padding-left: 25px;
+            line-height: 1.7;
         }
 
         .pillar-item strong {
@@ -129,7 +129,7 @@
             display: block;
             font-family: 'Cinzel', serif;
             font-size: 1.2rem;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         footer {
@@ -138,6 +138,7 @@
             font-size: 0.9rem;
             opacity: 0.6;
             border-top: 1px solid #222;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -153,7 +154,7 @@
 
     <section class="foundation-stones">
         <h2>The Foundation Stones</h2>
-        <p>Lay the bedrock for a new era of human sovereignty. Invest in the construction of the Sanctuary.</p>
+        <p>Lay the bedrock for a new era of human sovereignty. Direct support for the ongoing construction.</p>
         <div class="stone-container">
             <div class="stone">
                 <h3>Acquire PAIRS</h3>
@@ -163,7 +164,7 @@
             <div class="stone">
                 <h3>Support the Construction</h3>
                 <span class="address">FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXXb</span>
-                <small>Direct Development & Mercy Fund</small>
+                <small>Development, Legal Protection, & Mercy Fund</small>
             </div>
         </div>
     </section>
