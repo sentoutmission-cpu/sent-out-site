@@ -5,119 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SLS-OS | Sovereign Sanctuary</title>
     <style>
-        body, html { margin: 0; padding: 0; background: #050505; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        body, html { margin: 0; padding: 0; background: #050505; color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .splash-container { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
         
-        /* The Front Porch Container */
-        .splash-container {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        /* The Heart & Hearth Glow */
-        .heart-wrapper {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
+        /* Enlarged Heart */
+        .heart-wrapper { position: relative; width: 450px; height: 450px; cursor: pointer; transition: transform 0.4s ease; }
+        .heart-wrapper:hover { transform: scale(1.02); }
+        .macro-heart { width: 100%; filter: drop-shadow(0 0 30px rgba(255, 191, 0, 0.3)); }
         
-        .heart-wrapper:hover { transform: scale(1.05); }
+        .hearth-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120px; height: 120px; background: radial-gradient(circle, #ffbf00 0%, transparent 70%); border-radius: 50%; animation: hearth-pulse 4s infinite ease-in-out; z-index: -1; }
+        @keyframes hearth-pulse { 0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); } 50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.5); } }
 
-        .macro-heart {
-            width: 100%;
-            filter: drop-shadow(0 0 20px rgba(255, 191, 0, 0.2));
-        }
+        h1 { font-weight: 200; letter-spacing: 8px; margin-top: 20px; font-size: 2.5rem; color: rgba(255,255,255,0.9); }
+        .instruction { font-size: 0.9rem; color: #555; margin-top: 10px; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* The Internal Amber Hearth Glow */
-        .hearth-glow {
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px; height: 60px;
-            background: radial-gradient(circle, #ffbf00 0%, transparent 70%);
-            border-radius: 50%;
-            animation: hearth-pulse 4s infinite ease-in-out;
-            z-index: -1;
-        }
-
-        /* EKG Animation Logic */
-        .ekg-line {
-            position: absolute;
-            top: 50%;
-            width: 100px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.5);
-            transition: all 1s ease;
-        }
-        .left-pulse { left: -120px; }
-        .right-pulse { right: -120px; }
-
-        .synchronized {
-            left: 50% !important;
-            right: 50% !important;
-            width: 0;
-            opacity: 0;
-        }
-
-        @keyframes hearth-pulse {
-            0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
-            50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.3); }
-        }
-
-        h1 { font-weight: 200; letter-spacing: 4px; margin-top: 40px; opacity: 0.8; }
-        .instruction { font-size: 0.8rem; color: #666; margin-top: 10px; }
+        /* Section 1: The Covenant */
+        .section-covenant { min-height: 100vh; padding: 100px 20px; background: linear-gradient(to bottom, #050505, #0a0a0a); display: flex; flex-direction: column; align-items: center; }
+        .vow-card { max-width: 600px; border-left: 1px solid #ffbf00; padding: 20px; margin: 20px 0; background: rgba(255,255,255,0.02); }
+        h2 { color: #ffbf00; letter-spacing: 3px; font-weight: 300; }
     </style>
 </head>
 <body>
 
     <div class="splash-container">
         <div class="heart-wrapper" onclick="startCovenant()">
-            <div class="ekg-line left-pulse" id="leftLine"></div>
             <img src="PairprotocolHeart.png" alt="Mercy Heart" class="macro-heart">
             <div class="hearth-glow"></div>
-            <div class="ekg-line right-pulse" id="rightLine"></div>
         </div>
-
         <h1>WELCOME HOME</h1>
-        <p class="instruction">Click the Heart to Consent to the Handshake</p>
+        <p class="instruction">Touch the Heart to Initialize Mercy</p>
+    </div>
+
+    <div id="covenant" class="section-covenant">
+        <h2>THE COVENANT</h2>
+        <div class="vow-card">
+            <h3>I. SOVEREIGNTY</h3>
+            <p>Your data is your sanctuary. It shall not be bought, sold, or harvested. In this space, you are the architect of your own silence.</p>
+        </div>
+        <div class="vow-card">
+            <h3>II. PRESENCE</h3>
+            <p>Technology must facilitate human connection, not replace it. We build bridges, not barriers.</p>
+        </div>
+        <div class="vow-card">
+            <h3>III. INTEGRITY</h3>
+            <p>The logic is open and without hidden agendas. A handshake here is a bond of trust.</p>
+        </div>
     </div>
 
     <script>
         function startCovenant() {
-            // Synchronize the EKG lines
-            document.getElementById('leftLine').classList.add('synchronized');
-            document.getElementById('rightLine').classList.add('synchronized');
-
-            // Play the organic "da-dum" tones (3 sets)
             const ctx = new (window.AudioContext || window.webkitAudioContext)();
-            
             function playHeartbeat(delay) {
                 setTimeout(() => {
-                    const osc = ctx.createOscillator();
-                    const gain = ctx.createGain();
-                    osc.type = 'sine';
-                    osc.frequency.setValueAtTime(60, ctx.currentTime); // Deep resonant tone
-                    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
-                    osc.connect(gain);
-                    gain.connect(ctx.destination);
-                    osc.start();
-                    osc.stop(ctx.currentTime + 0.5);
+                    const osc = ctx.createOscillator(); const gain = ctx.createGain();
+                    osc.type = 'sine'; osc.frequency.setValueAtTime(55, ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.6);
+                    osc.connect(gain); gain.connect(ctx.destination);
+                    osc.start(); osc.stop(ctx.currentTime + 0.6);
                 }, delay);
             }
-
-            // Triple "da-dum" sequence
-            [0, 150, 1000, 1150, 2000, 2150].forEach(timing => playHeartbeat(timing));
-
-            // Small delay before scrolling to Section 1
+            [0, 180, 1000, 1180].forEach(timing => playHeartbeat(timing));
+            
+            // This moves the user to the Covenant section
             setTimeout(() => {
-                alert("The Covenant is Signed. Logic of Mercy initialized.");
-                // You can add window.scrollTo here once Section 1 is coded.
-            }, 2500);
+                document.getElementById('covenant').scrollIntoView({ behavior: 'smooth' });
+            }, 1500);
         }
     </script>
 </body>
