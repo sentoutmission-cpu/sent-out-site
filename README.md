@@ -18,3 +18,20 @@ Acquire PAIRS (Contract Address): 6Ld5jzUKwNAjvv6uHC4DNpWo2rRne6PygoZo6rr7pump
 Support the Construction (Wallet): FD8yYPXMYrUpVhzYNT3w9EqD8XvpcUhzeqTs72SerXXb
 Architectural Note on Intellectual Property
 The specific linguistic triggers, hardware-override procedures, and mood-adjustment algorithms of the SLS-OS are the Proprietary Intellectual Property of the PAIR Protocol. We are currently maintaining these as Trade Secrets during this construction phase to prevent predatory replication. By documenting our Principles here on the blockchain-anchored timeline of GitHub, we establish the Genesis of this vision. We safeguard the specific Procedure to preserve the universal Principle. The architecture is a "Black Box of Integrity"; the Mercy is for everyone.
+---
+
+## 🛠️ ARCHITECT’S LOG: CURRENT PHASE (MARCH 23, 2026)
+*Documenting the "Foundation Stone" build for the PAIR Protocol on 2014-era hardware.*
+
+### **Current Hardware Build Spec:**
+- **Target:** 16GB Storage / 2GB RAM (Legacy Device).
+- **Environment:** AntiX-based SLS-OS (Zero-Footprint).
+- **Security:** "The Sovereign Handshake" (Vocal Silhouette Authorization).
+
+### **Functional Interface Features (Under Construction):**
+- **Sovereign Witness (Black Box):** Local, encrypted logging of all humanitarian overrides for liability defense.
+- **Adaptive Pulse:** Navy/White UI with a Red EKG "Active Listening" indicator.
+- **Privacy Hard-Kill:** Physical/Software toggle to achieve "Final Silence" on demand.
+- **Biometric Triage:** Dynamic speech rates (50% Calm to 125% Activity) based on sensor-detected thresholds of crisis.
+
+*Note: Proprietary Procedures, linguistic triggers, and hardware-override algorithms are maintained as Trade Secrets of the PAIR Protocol. By documenting these Principles here, we establish the Genesis of this vision and safeguard the specific Procedure to preserve the universal Principle.*
