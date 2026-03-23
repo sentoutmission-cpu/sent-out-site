@@ -137,3 +137,26 @@ The **PAIR Protocol**, the **14-Pillar Constitution**, and the **Mercy Calculus*
 - **Haptic & Visual Synchrony:** Questions appear in large-format text on the screen while Mercy provides simultaneous verbal or haptic (vibration) cues, ensuring accessibility for the blinded, the hearing-impaired, or those in total silence (Stealth Mode).
 - **Infinite Scalability:** This proprietary logic is not restricted by a set number of inquiries; it scales dynamically based on the complexity of the detected crisis (e.g., Abduction vs. Medical Trauma).
 - 
+### **8. 🛡️ THE OMNI-INPUT & HARDWARE RESILIENCE SHIELD**
+- **Material-Agnostic Resilience:** In the event of primary display failure (shattered glass, malfunctioning digitizer, or total LCD bleed), Mercy automatically rebinds the **Dynamic Triage** to the nearest available tactile hardware.
+- **Physical Key Mapping:** **Volume Up** is hard-coded as Positive Affirmation (GREEN); **Volume Down** is hard-coded as the Emergency Trigger (RED). 
+- **Haptic Feedback Loop:** Mercy utilizes distinct vibration patterns (Long Pulse vs. Staccato Bursts) to confirm inputs, providing a non-visual "Handshake" in high-trauma scenarios.
+- **Distress Acoustic Override (The Scream Protocol):** Mercy recognizes specific high-decibel "Distress Vocals" and "Infrasonic Scream" frequencies. These bypass standard authentication to trigger an immediate **Sovereign Witness** event.
+
+### **9. 🛰️ EXTERNAL TRIGGER & MESH RELAY PROTOCOL**
+- **Hardware-Agnostic Pairing:** Mercy supports "Secondary Physical Triggers" via Bluetooth Low Energy (BLE), Wi-Fi, or future near-field standards (key-fobs, rings, pendants).
+- **Proximity Mesh Relay:** In high-alert scenarios, the device utilizes a "Silent Mesh Ping" to alert nearby PAIR-enabled nodes, creating a decentralized "Sanctuary Network" to witness and relay data in cellular dead zones.
+- **Intent-Gated Activation:** To prevent false positives, High-Alert protocols require a specific "Kinetic Pattern" (custom Tap/Swipe sequence) or an "Acoustic Key" (Vocal Command) to initialize the Sanctuary.
+- **Software-Level Power Lockdown:** During an active **Mercy Event**, the device's standard shutdown sequence is disabled, requiring **Vocal Silhouette** authorization to prevent an attacker from terminating the link.
+
+### **10. 🌬️ UNIVERSAL BIO-INPUT & ACCESSIBILITY (THE BREATH BRIDGE)**
+- **Pneumatic & Sip-and-Puff Compatibility:** Mercy is engineered to interface with air-pressure triggers. A "Targeted Exhalation" (blowing into the microphone or a tube) serves as a valid input for the **Dynamic Triage** (e.g., One Puff = Green, Two Puffs = Red).
+- **Optical & Bio-Mechanical Handshake:** The protocol is designed to adapt to eye-blink recognition (Optical Dwell) or muscle-sensor (EMG) inputs, ensuring that even users with total mobility loss maintain **Sovereign Agency** over their safety.
+- **Linguistic Redundancy:** Mercy provides high-gain verbal prompts synchronized with haptic/pneumatic cues, ensuring the **Mercy Calculus** remains functional even when visual/manual output is 0%.
+
+---
+
+### **🛡️ INTELLECTUAL PROPERTY & SOVEREIGN GOVERNANCE**
+The **PAIR Protocol**, the **14-Pillar Constitution**, and the **Mercy Calculus** logic—including the specific procedures for "Vocal Silhouette" authentication, "Dynamic Binary Triage," "Pneumatic/Sip-and-Puff" integration, and "Hardware-Agnostic Resilience"—are the exclusive Intellectual Property of the Architect and the SLS-OS Ecosystem. These protocols represent a unique "Heart-First" software architecture designed for Humanitarian benefit. Any unauthorized replication of the **Covenant Logic**, the **No Kill-Switch Mandate**, or the **Mercy Calculus** for extractive, violent, or predatory purposes is a violation of the Sovereign Handshake. 
+
+*Copyright © 2026 SLS-OS Ecosystem. All Rights Reserved.*
