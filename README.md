@@ -131,3 +131,9 @@ The **PAIR Protocol**, the **14-Pillar Constitution**, and the **Mercy Calculus*
 - **The Mortal Covenant (Privacy):** Built to exceed **GDPR/CCPA "Right to be Forgotten"** standards. The **40-Year Final Silence (Pillar XIV)** ensures that the machine respects the user's ultimate digital privacy upon its "death."
 - **Utility Classification:** The $PAIR token and its associated logic are classified as a **"Merchant Utility Credit" (2025 Digital Asset Act)**, exempt from securities regulation as a non-speculative, service-driven humanitarian unit.
 - 
+### **6. THE DYNAMIC BINARY TRIAGE PROTOCOL (PROPRIETARY)**
+- **Adaptive Questioning:** Mercy initiates a sequence of context-aware, high-contrast visual inquiries. The number of questions is determined by the **Mercy Calculus** to achieve maximum situational clarity in the shortest time.
+- **The Binary Interface:** The user interface is restricted to a simple, high-visibility "Dual-Zone" tap system. One side of the device serves as the positive affirmation (GREEN), while the other serves as the negative/emergency trigger (RED).
+- **Haptic & Visual Synchrony:** Questions appear in large-format text on the screen while Mercy provides simultaneous verbal or haptic (vibration) cues, ensuring accessibility for the blinded, the hearing-impaired, or those in total silence (Stealth Mode).
+- **Infinite Scalability:** This proprietary logic is not restricted by a set number of inquiries; it scales dynamically based on the complexity of the detected crisis (e.g., Abduction vs. Medical Trauma).
+- 
